@@ -1,0 +1,1737 @@
+*
+	margin 0
+	padding 0
+
+body
+	background-color #FFFFFF
+	font-family helvetica, Arial, sans-serif 
+
+header
+	position absolute 
+	width 100% 
+	height 100px 
+	z-index 9
+
+.header-content
+	width 100%
+	height 100%
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	.header-logo
+		width 50%
+		text-align center
+		img
+			width 150px
+			height 65px
+			margin-top 20.5px
+	.header-menu--burger
+		width 50%	
+
+.icon-menu--content
+	width 25px
+	height 18px
+	cursor pointer
+	outline none
+	margin 41px 40px 0 auto
+	display block
+
+.icon-menu
+	display inline-block
+	margin-top 0
+	outline none
+	small
+		display block
+		border-radius 3em
+		width 24px
+		height 4px
+		margin 0 0 3px 0
+		background-color #0CB1EB
+		transition all .3s ease-in-out
+	&:hover
+		outline none
+
+.icon-menu--active
+	small:nth-child(1)
+		transform rotate(45deg) translateY(6px) translateX(4.5px)
+		width 24px
+		height 5px
+		background-color #DA5555
+	small:nth-child(2)
+		width 0
+		height 0
+	small:nth-child(3)
+		transform rotate(-45deg) translateY(-1px)		
+		background-color #DA5555		
+		width 24px
+		height 5px	
+
+.overlay-menu
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100vh
+	background-color rgba(250,250,250,0.95)
+	z-index 7
+	display none
+
+nav.menu-options
+	position absolute
+	width 100%
+	height auto
+	top 50%
+	margin-top -25%
+	margin-left 0.1px
+	ul
+		padding 0
+		margin 0
+		text-align center
+		li
+			list-style none
+			height 45px
+			line-height 45px
+			transition all 0.3s ease-in-out
+			a
+				display block
+				width 100%
+				height 100%
+				text-decoration none
+				color #00467A
+				font-size 23px
+				font-weight 600
+				text-transform uppercase
+				transition all 0.3s ease-in-out
+				&:hover
+					transform scale(1.1)
+					color #002593		
+
+.slick-slider
+	margin-bottom 0
+
+.slide-main
+	width 100%
+	height 450px
+	overflow hidden
+	background-position center
+	background-size cover
+
+.slide-img-01
+	background-image url('../img/slide/ingenieria.jpg')
+
+.slide-img-02
+	background-image url('../img/slide/innovacion.jpeg')
+
+.slide-img-03
+	background-image url('../img/slide/liderazgo.jpg')
+
+.slide-layout--color
+	position absolute
+	width 100%
+	height 100%
+	background linear-gradient(-180deg, rgba(242,245,203,0.64) 0%, rgba(14,131,236,0.64) 100%)
+	z-index 2
+
+.slide-leyend
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%,-50%)
+	z-index 4
+	h1
+		color #002593
+		font-size 45px
+		margin 0
+		text-transform uppercase
+
+.slider-button--down
+	position absolute
+	top 60%
+	left 50%
+	width 50px
+	height 50px
+	margin-left -25px
+	background-color rgba(231,231,231,0.7)
+	z-index 4	
+	border-radius 50%	
+	text-align center
+	line-height 55px
+	outline none
+	overflow hidden
+	transition all 0.2s ease-in-out
+	a
+		text-decoration none
+		display block
+		width 100%
+		height 100%
+	i
+		font-size 20px
+		color #0E5CEC
+	&:hover
+		background-color rgba(231,231,231,0.8)
+
+.we-main
+	background-color #FFFFFF
+	width 100%
+	height 550px
+	padding 55px 0
+	position relative
+
+.we-main--content
+	position absolute
+	top -40px
+	left 50%
+	transform translateX(-50%)
+	width 70%
+	height auto
+	background-color #FFFFFF
+	box-shadow 0 0 10px 5px rgba(0,0,0,0.2)
+	padding 30px 40px
+	h2
+		color #293D47
+		font-family "Arial Rounded MT Bold", sans-serif
+		text-transform uppercase
+
+.we-main--text
+	width 100%
+	margin-top 30px
+	div
+		margin 20px 0
+
+.mision, .vision
+	h3
+		margin 0 0 20px 0
+		color #253237
+	p
+		margin-top: 20px
+		font-size: 15px
+		line-height: 20px
+		color #586B74
+		text-align justify
+
+.services
+	background-color #F6F6F6
+	width 100%
+	height auto
+	padding 55px 0
+
+.services-content
+	width 90%
+	margin 0 auto
+	height auto
+
+.services-banner
+	width 100%
+	height auto
+	&--text
+		width 85%
+		height auto
+		margin 0 auto
+		background-color #F6F6F6
+		padding 40px 0
+		box-shadow  0 0 4px rgba(94,94,94,0.37)
+		font-family "Arial Rounded MT Bold", sans-serif
+		z-index 2
+		position relative
+		h3
+			color #293D47
+			margin-left 30px
+			font-size 25px
+			text-transform uppercase
+		h2
+			color #3187B0
+			margin-left 30px
+			font-size 40px
+			text-transform uppercase
+		p
+			font-family "Helvetica", Arial, sans-serif
+			margin 15px 30px 0 30px
+			font-size 15px
+			color #455A64
+	&--image
+		width 100%
+		background-image url('../img/service.jpg')
+		background-size cover
+		height 300px
+		z-index 1
+		margin-top -100px	
+					
+.services-portfolio
+	width 100%
+	height auto
+	padding 20px 0
+	&:last-child
+		margin-bottom 0px
+
+.service-box
+	width 280px
+	height 280px
+	background-color #FAFAFA
+	margin 30px auto 80px auto
+	position relative
+	border-radius 50%
+	font-family 'Arial Rounded MT Bold', sans-serif
+	&--letter
+		position absolute
+		width 50px
+		height 50px
+		background-color #000
+		text-align center
+		line-height 50px
+		h3
+			font-size 30px
+			text-transform uppercase
+			margin 0
+			color #FFFFFF
+	h2
+		position absolute
+		color #FFFFFF
+		font-size 24px
+		width 100%
+		margin 0 auto
+		bottom -50px
+		text-align center
+		text-transform uppercase
+		color #0051FF
+
+.download-point
+	position absolute
+	border-radius 50%
+	width 50px
+	height 50px
+	line-height 50px
+	text-align center
+	bottom 15px
+	right 15px
+	background-color #0051FF
+	a
+		position relative
+		text-align center
+		text-decoration none
+		z-index 2
+		display block
+		border-radius inherit
+		box-shadow 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0)
+		-webkit-transition background-color 0.2s
+		-moz-transition background-color 0.2s
+		transition background-color 0.2s
+	&::after
+		content ''
+		position absolute
+		z-index 1
+		width 100%
+		height 100%
+		top 0
+		left 0
+		border-radius inherit
+		background-color transparent
+		-webkit-animation animate-pulse 2s infinite
+		-moz-animation animate-pulse 2s infinite
+		animation animate-pulse 2s infinite	
+
+@-webkit-keyframes animate-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    box-shadow: inset 0 0 5px 5px rgba(0,81,255,0.6);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+}
+
+@-moz-keyframes animate-pulse {
+  0% {
+    -moz-transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+  100% {
+    -moz-transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+}
+
+@keyframes animate-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(0,81,255,0.6);
+  }
+}
+
+.icon-point
+	color #FFFFFF
+	font-size 25px
+
+.service-civil
+	background-image url('../img/services/RyR_Civil.jpg')
+	background-size cover
+			
+.service-electrical
+	background-image url('../img/services/RyR_Electrica.jpg')
+	background-size cover
+				
+.service-ic
+	background-image url('../img/services/RyR_Instrumentacion.png')
+	background-size cover
+	margin-bottom 100px
+	h2
+		bottom -75px
+
+.service-mechanics
+	background-image url('../img/services/RyR_Mecanica.jpg')
+	background-size cover
+
+.service-petroleum
+	background-image url('../img/services/RyR_petroleo.jpg')
+	background-size cover
+
+.service-logo
+	background-image url('../img/services/service-logo.png')
+	background-size cover
+	margin-bottom 0px	
+		
+.projects
+	width 100%
+	height auto
+	background-color #0287c4
+
+.projects-content
+	width 90%
+	margin 0 auto
+	height auto
+	padding 50px 0
+
+.protects-header
+	width 95%
+	margin 0 auto
+	h2
+		color #FFFFFF
+		font-size 27px
+		text-transform uppercase
+		font-family "Arial Rounded MT Bold", sans-serif
+		span
+			color #014091
+	p
+		margin-top 20px
+		color #FFFFFF												
+		line-height 24px
+
+.projetcs-participation
+	width 95%
+	margin 0 auto
+
+.project-box
+	width 100%
+	height auto
+	margin 30px auto
+	&:nth-child(1)
+		margin-top 30px
+	&:nth-child(2)
+		margin-bottom 0
+	h3
+		color #014091
+		text-transform uppercase
+	p
+		color #FFFFFF											
+		display block
+		display -webkit-box
+		max-width 292px
+		height 135px
+		margin 20px 0
+		font-size 16px
+		line-height 22px
+		-webkit-line-clamp 6
+		-webkit-box-orient vertical
+		overflow hidden
+		text-overflow ellipsis
+	a
+		color #FFFFFF
+		font-weight 700
+		text-decoration none
+		font-size 15px
+		i
+			color #014091
+			margin-left 6px
+			vertical-align middle
+			font-size 15px
+
+.overlay-projects
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100vh
+	background-color rgba(250,250,250,1)
+	z-index 7
+	display none
+
+.overlay-projects--content
+	position relative
+	width 100%
+	height 100%
+
+.overlay-projects--button
+	position absolute
+	top -20px
+	right 15px
+	width 40px
+	height 40px
+	line-height 40px
+	text-align center
+	background-color #DA5555
+	border-radius 50%
+	z-index 7
+	cursor pointer
+	transition all 0.2s ease-in-out
+	i
+		font-size 15px
+		color #FFFFFF
+	&:hover
+		box-shadow 0 3px 5px 2px rgba(0,0,0,0.2)
+		
+.overlay-projects--header
+	width 90%
+	height auto
+	text-align center
+	margin 40px auto
+	img
+		width 150px
+		height 55px
+	h2
+		font-size 24px
+		color #023D68	
+		text-transform uppercase
+		margin-top 20px
+
+.project-descritption
+	width 80%
+	margin 0 auto 40px auto
+	div
+		display none
+		width 100%
+		h3
+			font-size 18px
+			color #263238
+			margin 0 0 20px 0
+		p
+			color #455A64
+			margin 10px 0
+			line-height 23px
+			&:nth-child(1)
+				background-color red	
+	
+.overlay-we, .tooltip
+	display none
+
+.clients
+	width 100%
+	height auto
+	background-color #FAFAFA
+	padding 60px 0
+
+.clients-content
+	width 90%
+	height auto
+	margin 0 auto
+
+.clients-title
+	text-align left
+	width 95%
+	margin 0 auto
+	h2
+		color #0CB1EB
+		font-size 25px
+		text-transform uppercase
+		font-family "Arial Rounded MT Bold", sans-serif
+
+.clients-company
+	width 95%
+	display block
+	margin 30px auto 0px auto
+
+.slider-clients
+	margin-bottom 0
+	div
+		margin 0 2.5px
+		img
+			margin 0 5px
+			box-shadow 0 0 3px 0 rgba(0,0,0,0.15)
+
+.allies
+	width 100%
+	height auto
+	padding 80px 0
+	background-image linear-gradient(to top right, rgba(250,250,250,0.8), rgba(250,250,250,0.85)), url('../img/allies.jpg')
+	background-size cover
+
+.allies-content
+	width 85%
+	height auto
+	margin 0 auto
+
+.allies-content--text
+	h2
+		text-transform uppercase
+		color #1C8ACC
+		font-family "Arial Rounded MT Bold", sans-serif
+		margin-bottom 20px
+	p
+		color #3c454c	
+		line-height 24px
+
+.contact
+	width 100%
+	height auto
+	background-color #FFFFFF
+	padding 60px 0 10px 0
+
+.contact-content
+	width 90%
+	height auto
+	margin 0 auto
+
+.contact-title
+	text-align center
+	width 70%
+	margin 0 auto
+	h2
+		color #00477A
+		font-size 26px
+		text-transform uppercase
+		font-family "Arial Rounded MT Bold", sans-serif
+	p
+		margin 20px 0
+		color #3C454C	
+
+.contact-form
+	width 100%
+	height auto
+	form
+		width 100%
+		height auto
+		text-align center
+		input[type=text], input[type=tel]
+			border 1px solid #C5C5C5
+			border-radius 3px
+			width 90%
+			padding 10px
+			margin 6px auto
+			font-size 15px
+			outline none
+			transition all 0.3s ease-in-out
+			color #263238
+			-webkit-appearance none
+			-moz-appearance none
+			appearance none
+			&:nth-child(1)
+				margin-top 0
+			&:focus
+				border-color #686868	
+		textarea
+			border 1px solid #C5C5C5
+			border-radius 3px
+			width 90%
+			padding 10px
+			margin 6px auto
+			font-family helvetica, Arial, sans-serif 
+			font-size 15px
+			resize none
+			outline none
+			transition all 0.3s ease-in-out
+			color #263238
+			-webkit-appearance none
+			-moz-appearance none
+			appearance none
+			&:focus
+				border-color #686868	
+	&--actions
+		margin 10px auto 0 auto
+		width 97%
+		height 35px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		
+.form-action--button
+	width 25%
+	text-align left
+	input
+		border none
+		background-color #008DF0
+		color #FFFFFF
+		width 75px
+		height 35px
+		font-size 15px
+		font-weight 700
+		border-radius 3px
+		-webkit-appearance none
+		-moz-appearance none
+		appearance none
+		cursor pointer
+
+.form-action--link
+	width 75%	
+	line-height 35px
+	a
+		text-decoration none
+		font-size 15px
+		font-weight 700
+		color #193B99
+					
+.contact-media
+	width 83.5%
+	height auto
+	margin 30px auto 20px auto
+	border-top 1.5px solid rgba(0,141,240,0.50)
+	padding 20px 20px 10px 20px
+	&--box
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex	
+		justify-content left
+		margin 10px 0
+		&:nth-child(1)
+			margin-top 0
+		&:nth-child(3)
+			margin-bottom 0
+
+.contact-image
+	display none			
+
+.box-icon
+	width 50px
+	height 50px
+	background-color #00477A
+	text-align center
+	line-height 50px
+	border-radius 50%
+	font-size 25px
+	color #FFFFFF
+
+.box-text
+	width auto
+	height 50px
+	line-height 50px
+	margin-left 15px
+	p
+		color #00477A
+		font-weight 700
+		font-size 18px
+		a
+			text-decoration none
+
+.map-icon
+	background-color #009D3C
+
+.map-text
+	a
+		color #009D3C
+
+#map
+	cursor pointer
+
+.overlay-map
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100vh
+	background-color rgba(250,250,250,0.98)
+	z-index 7
+	display none
+	&--content
+		width 100%
+		height 100%
+		position relative
+		overflow-y auto
+	&--header
+		position absolute
+		top 5%
+		left 50%
+		transform translateX(-50%)
+		width 90%
+		height 230px
+	&--body
+		position absolute
+		top 220px
+		left 50%
+		transform translateX(-50%)
+		width 90%
+		height 250px
+		box-shadow 0 0 35px 5px rgba(0,0,0,0.2)
+		margin-bottom 20px
+		iframe
+			width 100%
+			height 100%
+			display block	
+
+.map-logo
+	margin-top 30px
+	text-align center
+	img
+		width 165px
+		height 75px
+
+.map-title
+	width 80%
+	margin 20px auto 0 auto
+	text-align center
+	h2
+		text-transform uppercase
+		font-family "Arial Rounded MT Bold", sans-serif
+		color #263238
+
+.overlay-map--button
+	position absolute
+	top 25%
+	right 5%
+	width 90px
+	height 40px
+	line-height 40px
+	background-color #193B99
+	border-radius 3px
+	text-align center
+	overflow hidden	
+	z-index 7
+	a
+		display block
+		width 100%
+		height 100%
+		text-decoration none
+		color #FFFFFF
+				
+.message-error
+	position fixed
+	left 10%
+	bottom 25px		
+	width 65%
+	height 50px
+	line-height 50px
+	background-color #D7263D
+	color #FFFFFF
+	text-align center
+	border-radius 3px
+	box-shadow 0 0 18px 5px rgba(0,0,0,0.2)
+	transition all 0.3s ease-in-out
+	display none
+
+footer
+	width 100%
+	height auto
+	background-color #E5E5E5
+	padding 50px 0 50px 0
+
+.footer-content
+	width 90%
+	height auto
+	margin 0 auto	
+
+.footer-menu
+	width 100%
+	height auto
+	&--logo
+		width 100%
+		text-align center
+		img
+			width 150px
+			height 65px
+	&--options
+		text-align center
+		ul
+			margin 0
+			padding 0
+			li
+				list-style none
+				margin 10px 0
+				text-align center
+				&:nth-child(4)
+					width 90px
+					height 35px
+					line-height 35px
+					background-color #1D7FD1
+					margin-left auto
+					margin-right auto
+					border-radius 3px
+					a
+						color #FFFFFF
+						display block
+						width 100%
+						height 100%
+				a
+					text-decoration none
+					color #1D7FD1
+
+.footer-social
+	width 90%
+	margin 30px auto
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content space-between
+	a
+		text-decoration none
+		color #063080
+
+.footer-legal
+	width 90%
+	height auto
+	margin 30px auto 0 auto
+	text-align center
+	p
+		font-size 14px	
+		color #525C63	
+		margin 5px 0
+		span
+			a
+				text-decoration none
+				font-weight 700
+				color #00C05D
+				
+.button-up
+	position fixed
+	bottom -10%
+	right 20px
+	width 50px
+	height 50px
+	text-align center
+	line-height 50px
+	background-color #00B8D4
+	border-radius 50%
+	z-index 6
+	box-shadow 0 5px 10px 0 rgba(0,0,0,0.3)
+	overflow hidden
+	transition all 0.3s ease-in-out
+	a
+		text-decoration none
+		color #FFFFFF
+		display block
+		width 100%
+		height 100%
+		border-radius 50%
+		outline none
+	&:hover	
+		box-shadow 0 10px 10px 0 rgba(0,0,0,0.3)
+
+@media (orientation: landscape)
+	
+	nav.menu-options
+		margin-top 0
+		top 30%
+		ul
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+			text-align center
+			li
+				width 100%
+	
+	.we-main
+		height 380px
+
+	.overlay-map--button
+		top	40%
+
+	.footer-social
+		width 70%		
+
+@media (min-width 768px)
+
+	.header-content
+		.header-logo
+			text-align left
+			img
+				width 160px
+				height 63px
+				margin-left 60px
+			
+	.icon-menu--content
+		margin-right 60px
+	
+	nav.menu-options
+		ul
+			display inherit
+			display inherit
+			display inherit
+			display inherit
+			display inherit
+			justify-content center
+
+	.slide-main
+		height 700px
+	
+	.slide-leyend
+		top 52%
+		h1
+			font-size 55px
+	
+	.we-main
+		height 350px
+	
+	.mision, .vision
+		h3
+			font-size 23px
+		p
+			font-size 16px
+			line-height 21px
+
+	.services-portfolio
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		flex-wrap wrap
+		padding 40px 0
+	
+	.service-box
+		margin 0 auto 
+	
+	.service-ic
+		margin-bottom 100px
+
+	.service-mechanics
+		margin-bottom 80px		
+
+	.download-point
+		width 55px
+		height 55px
+		a
+			i
+				line-height 55px
+	
+	.icon-point
+		font-size 27.5px			
+
+	.protects-header
+		h2
+			font-size 30px
+	
+	.projetcs-participation
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center		
+	
+	.overlay-projects--button
+		top -35px
+		right 30px
+
+	.overlay-projects--header
+		width 80%
+		max-width 900px
+		text-align justify
+		margin-top 60px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		img
+			width 160px
+			height 60px
+		h2
+			width 60%
+			text-align right
+			margin-left 60px
+	
+	.project-descritption
+		width 75%	
+		max-width 900px
+		div
+			h3
+				font-size 20px
+			p
+				font-size 17px
+				line-height 24px
+
+	.clients-title
+		h2
+			font-size 32px		
+	
+	.allies-content
+		width 75%
+
+	.contact-title
+		h2
+			font-size 32px
+	
+	.contact-form
+		form
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+			flex-wrap wrap
+			div.elements
+				&:nth-child(1)
+					width 50%
+				&:nth-child(2)
+					width 50%
+			textarea
+				height 122px
+				margin-top 0	
+	
+	.form-action--button
+		width 80px
+
+	.form-action--link
+		width 40%			
+	
+	.contact-media
+		width 100%
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		padding-left 0
+		padding-right 0
+		&--box
+			margin-top 0
+			margin-left 8px
+			margin-right 8px
+	
+	.overlay-map
+		&--header
+			top 10%
+			height 150px
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+		&--body
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			width 80%
+			height 400px
+
+	.map-logo
+		margin-top 40px
+		text-align center
+		width 40%
+		img
+			width 165px
+			height 75px
+
+	.map-title
+		width 60%
+		line-height 150px
+		margin 0
+		h2
+			font-size 25px
+
+	.overlay-map--button
+		top 25%
+		right 10%
+		width 100px
+
+	.footer-menu
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex	
+		justify-content center
+		flex-wrap wrap
+		&--logo			
+			width 40%
+			img
+				width 160px
+				height 63px
+		&--options
+			width 60%
+			height 80px
+			line-height 80px
+			ul
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				justify-content center
+				li
+					margin 0 8px
+					font-size 18px
+					&:nth-child(4)
+						height 40px
+						line-height 40px
+						margin 20px 0 0 8px
+
+	.footer-social
+		width 40%	
+		max-width 280px
+		margin 10px auto
+		a
+			font-size 16px
+
+	.footer-legal
+		margin 10px auto 0 auto	
+		p
+			font-size 16px
+
+@media (min-width 1024px)
+	
+	.icon-menu--content
+		display none
+	
+	.overlay-menu
+		display block
+		position absolute
+		top 28px
+		left inherit
+		right 50px
+		width 600px
+		height 50px
+		background-color transparent
+		z-index 10	
+	
+	nav.menu-options
+		top 0
+		margin-top 0
+		ul
+			margin 0 0 0 0
+			width 600px
+			height 40px
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+			li
+				height 100%
+				line-height 40px
+				margin 0 2px
+				width 17.5%
+				text-align center
+				&:nth-child(1)
+					width 30%
+				&:last-child
+					a
+						display block
+						width 100%
+						height 100%
+						background-color #00467A
+						color #FFFFFF
+						border-radius 3px
+						font-weight 400
+				a
+					font-size 16px
+					font-weight 500
+					color #00467A
+					text-transform capitalize
+					&:hover
+						border-radius 2px
+	
+	.slide-main
+		height 600px
+
+	.services-banner
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		position relative
+		&--text
+			height 190px
+			margin-top 15px
+			width 35%
+			position absolute
+		&--image
+			margin-top 0
+			width 75%
+			height 300px
+			position absolute
+			margin-left 25%
+	
+	.services-portfolio
+		padding-top 320px
+		justify-content inherit
+	
+	.download-point
+		width 50px
+		height 50px
+		a
+			i
+				line-height 50px
+	
+	.icon-point
+		font-size 25px			
+	.project-box
+		width 50%
+		p
+			max-width 400px
+	
+	.overlay-projects--header
+		width 75%
+
+	.clients
+		background-image linear-gradient(-90deg,rgba(216,216,216,.28) 0,#fafafa 100%),url(../img/we-allies.png)
+		background-size contain
+		background-repeat no-repeat
+		background-position right 
+
+	.clients-content		
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-wrap wrap
+		justify-content start
+
+	.clients-title
+		width 100%
+		h2
+			margin 0
+
+	.clients-company
+		width 45%
+		margin 30px 0 0 0
+
+	.slider-clients
+		div
+			width 500px
+			box-shadow 0 2 4 0 rgba(0,0,0,0.5)
+			img
+				width 80%
+				margin 0
+
+	.allies
+		background-image none
+		padding 0
+
+	.allies-content
+		width 100%
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+	
+	.allies-content--text
+		width 46%	
+		background-color #FAFAFA
+		padding 70px 40px
+		p
+			color #7C7C7C
+		 
+	
+	.allies-content--image
+		width 54%
+		background-image linear-gradient(-90deg, rgba(216,216,216,0.28) 0%, #FAFAFA 100%), url('../img/allies.jpg')
+		background-size cover
+	
+	.contact-content
+		width 750px
+	.overlay-map--button
+		top calc(50% - 250px)
+
+	.overlay-map
+		&--body
+			top 50%
+			tranform translate(-50%, 0)
+
+	.message-error
+		left 30px
+		width 300px
+		
+@media (min-width 1200px)
+	
+	.header-content
+		.header-logo
+			width 280px
+			position relative
+			img
+				margin-top 20.5px	
+	
+	.overlay-menu
+		width 400px
+
+	nav.menu-options
+		ul
+			width 400px
+			li
+				width 25%
+				&:nth-child(1)
+					display none
+	
+	.we-main
+		display none
+
+	.tooltip
+		position absolute
+		left 50%
+		top 110px
+		margin-left -100px
+		display none
+		z-index 1
+
+	.tooltip-content
+		position relative
+		background-color #0287C4
+		color #FFFFFF
+		width 140px
+		padding 13px
+		text-align center
+		border-radius 3px 0 0px 3px
+		font-size 15px
+		box-shadow 0 0 10px 2px rgba(0,0,0,0.20)
+		cursor pointer
+		&:after, &:before
+			bottom 100%
+			left 50%
+			border solid transparent
+			content " "
+			height 0
+			width 0
+			position absolute
+			pointer-events none
+		&:after
+			border-bottom-color #0287C4
+			border-width 15px
+			margin-left 0px
+		&:before
+			border-bottom-color #c2e1f5
+			border-width 0px
+			margin-left -36px
+	
+	.tooltip-btn--close
+		position absolute
+		right -43px
+		top 0
+		width 43px
+		height 43px
+		line-height 43px
+		text-align center
+		background-color #0298dd
+		cursor pointer
+		box-shadow 4px 0 10px 2px rgba(0,0,0,0.20)
+		z-index 2
+		color #FFFFFF
+		transition all 0.2s ease-in-out
+		&:hover
+			background-color #015378
+
+	.slide-main
+		height 95vh
+
+	.overlay-we
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height 100vh
+		background-color rgba(250,250,250,1)
+		z-index 10
+
+	.overlay-we--content
+		position relative
+		width 100%
+		height 100%
+		background-size cover
+		background-repeat no-repeat
+		background-image linear-gradient(-180deg, rgba(27,34,151,0.50) 0%, rgba(27,34,151,0.50) 100%), url('../img/we_reference.jpg')
+
+	.button-close
+		position absolute
+		top 25px
+		right 35px
+		width 55px
+		height 55px
+		line-height 55px
+		text-align center
+		background-color #193B99
+		color #FFFFFF
+		cursor pointer
+		border-radius 50%
+		transition all 0.2s ease-in-out
+		i
+			font-size 19px
+		&:hover
+			top 22px	
+			box-shadow 0 12px 12px 0 rgba(0,0,0,0.2)
+
+	.overlay-we--text
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		width 900px			
+		height 360px
+		box-shadow 0 0 30px 2px rgba(0,0,0,0.1)
+		background-color rgba(255,255,255,1)
+		
+	.we-text--header
+		width 100%
+		height 120px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		position relative
+		img
+			width 160px
+			height 60px
+			position absolute
+			top 25px
+			left 30px
+		h2
+			position absolute
+			top 47.5px
+			right 30px
+			text-transform uppercase
+			font-size 20px
+			color #023D68
+			
+	.we-text--content
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center	
+		height 170px
+		position relative
+
+	.we-mision, .we-vision
+		width 44%
+		height 100%
+		padding 0 30px 35px 30px
+		h3
+			margin 0 0 20px 0
+			color #253237
+		p
+			margin-top 20px
+			font-size 15px
+			line-height 20px
+			color #586B74
+			text-align justify
+
+	.we-mision
+		border-right 1px solid #BABABA
+	
+	.we-text--logo
+		position absolute 
+		top 60%
+		left 50%
+		transform translate(-50%,-50%)
+		width 60px
+		height 60px
+		background-color rgba(255,255,255,1)
+		text-align center
+		img
+			width 35px
+			height 35px
+			margin-top 12.5px
+			margin-left 4px
+
+	.services-content
+		width 1100px
+	
+	.services-banner
+		height 350px
+		margin-top 40px
+		h3
+			margin-top 12px
+		p
+			font-size 17px
+	
+	.services-portfolio
+		height 1200px
+		position relative
+		display inherit
+		padding 0
+
+	.service-box
+		position absolute
+		margin 0
+
+	.service-logo
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		box-shadow 0 2px 4px 0 rgba(0,0,0,0.50)
+
+	.service-ic
+		top 5%
+		left 50%
+		transform translate(-50%, 0)
+
+	.service-mechanics, .service-civil
+		top 25%
+		right 5%
+
+	.service-civil
+		left 5%	
+
+	.service-petroleum, .service-electrical
+		bottom 15%
+		right 15%
+
+	.service-electrical
+		left 15%	
+
+	.projects-content
+		width 1100px
+	
+	.project-box
+		p
+			max-width 500px
+			height 90px
+			-webkit-line-clamp 4	
+
+	.clients-company
+		width auto
+
+	.clients-title
+		text-align left
+	
+	.slider-clients
+		div
+			width 600px
+
+	.allies-content--text
+		width 40%	
+		padding 90px 40px 90px 80px
+		h2
+			font-size 32px
+		p
+			color #7C7C7C
+			font-size 17px
+		 
+	.allies-content--image
+		width 60%
+
+	.contact
+		position relative
+		overflow hidden
+		background-color #FDFDFD
+		background-image url('../img/background-R&RSolutions.png')
+		background-repeat no-repeat
+		background-size contain
+		background-position 65vw 50%
+		
+	.contact-content
+		width 800px
+		margin-left 7vw
+	
+	.contact-title
+		width 100%
+		text-align left
+		h2
+			margin-left 5px
+		p
+			margin-left 9px
+	
+	.form-action--link
+		width 32%	
+
+	.overlay-map
+		&--content
+			max-width 1200px
+			margin 0 auto
+		&--body
+			width 70%	
+	
+	.map-title
+		h2
+			font-size 28px		
+	
+	.overlay-map--button
+		right 15%
+		width 100px					
+
+	.footer-menu
+		width 800px
+		margin-left auto
+		margin-right auto
+		&--logo
+			img
+				width 170px
+				height 60px
+		&--options
+			ul
+				li
+					font-size 16px
+	
+	.footer-legal
+		margin 10px auto 0 auto	
+		p
+			font-size 13px	
+
+@media (min-width 1400px)
+
+	.clients
+		height 350px
+
+	.clients-content
+		margin-top 50px
+
+	.allies-content--text
+		width 35%	
+		padding 120px 40px 120px 160px
+		 
+	.allies-content--image
+		width 65%
+
+	.contact-content
+		width 900px
+		margin-left 10vw
+	
+	.contact
+		background-position 68vw 50%
+
+@media (min-width 1600px)	
+
+	.allies-content--text
+		width 30%
+		padding 120px 40px 120px 180px
+		 
+	.allies-content--image
+		width 70%	
