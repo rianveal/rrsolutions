@@ -310,6 +310,7 @@ $(document).ready(function() {
   btnCloseModalWe = document.querySelector('#btnCloseModalWe')
   btnCloseModalWe.addEventListener('click', function(){
     $('.we-main').fadeOut()
+    $('body').css('overflow-y','visible')
   })
 
   function openModalWe(){
@@ -317,6 +318,7 @@ $(document).ready(function() {
     weButton.addEventListener('click', function(){
       $('body').css('overflow-y','hidden')
       $('.we-main').fadeIn()
+      document.querySelector('.we-main--content').style = 'display: block'
     })
   }
 
