@@ -5,7 +5,7 @@ $(document).ready(function() {
   var overlay = $('.overlay-menu')
   var width = window.innerWidth
   var navig = $('nav.menu-options')
-
+  openModalWe() //new
   // Acción para abrir menu de opciones en mobiles
   $(iconMenu).on('click', function(e) {
     e.preventDefault()
@@ -305,5 +305,19 @@ $(document).ready(function() {
     window.open(url, '_blank');
     return false;
   });
+
+  // new
+  btnCloseModalWe = document.querySelector('#btnCloseModalWe')
+  btnCloseModalWe.addEventListener('click', function(){
+    $('.we-main').fadeOut()
+  })
+
+  function openModalWe(){
+    weButton = document.querySelector('#weButton')
+    weButton.addEventListener('click', function(){
+      $('body').css('overflow-y','hidden')
+      $('.we-main').fadeIn()
+    })
+  }
 
 })

@@ -173,17 +173,45 @@ nav.menu-options
 		background-color rgba(231,231,231,0.8)
 
 .we-main
-	background-color #FFFFFF
+	/*background-color #FFFFFF
 	width 100%
 	height 550px
 	padding 55px 0
-	position relative
+	position relative*/
+	display none
+	position fixed
+	width 100%
+	height 100vh
+	top 0
+	z-index 1000
+	background-color rgba(255,255,255,0.9)
+
+//new
+.we-button--content
+	width 100%
+	height auto
+	display block
+	margin-bottom 20px
+	text-align right
+
+.button-close
+	width 100px
+	height 40px
+	line-height 40px
+	background-color #0051ff
+	color #ffffff
+	text-align center
+	text-transform uppercase
+	border-radius 3px
+	display inline-block
 
 .we-main--content
 	position absolute
-	top -40px
+	//top -40px
+	top 50%
 	left 50%
-	transform translateX(-50%)
+	//transform translateX(-50%)
+	transform translate(-50%, -50%) // new
 	width 70%
 	height auto
 	background-color #FFFFFF
@@ -957,8 +985,11 @@ footer
 			li
 				width 100%
 	
-	.we-main
-		height 380px
+	//.we-main
+		//height 380px
+
+	.we-button
+		top 18%
 
 	.overlay-map--button
 		top	40%
@@ -996,9 +1027,9 @@ footer
 		h1
 			font-size 55px
 	
-	.we-main
-		height 350px
-	
+	//.we-main
+		//height 350px
+
 	.mision, .vision
 		h3
 			font-size 23px
