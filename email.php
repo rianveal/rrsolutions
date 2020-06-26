@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="refresh" content="4; url=http://gestionproactiva.com.co/"/>
+  <meta http-equiv="refresh" content="4; url=http://ryrsolutions.co/"/>
   <title>R&RSolutions S.A.S. | Send email</title>
   <style>
     body{
@@ -35,10 +35,11 @@
 </head>
 <body>
   <?php
+    $desde = 'contactoweb@ryrsolutions.co';
 
     // Varios destinatarios
-    $para  = 'rona7ld@gmail.com' . ', '; // atención a la coma
-    $para .= 'rona7ld@gmail.com';
+    $para  = 'gerencia@ryrsolutions.co' . ', '; // atención a la coma
+    $para .= 'gerencia@ryrsolutions.co';
 
     // título
     $título = 'R&RSolutions S.A.S.';
@@ -53,44 +54,35 @@
       <div style="padding: 1em 0 0 0; text-align: justify;">
         <p>Hola Sres.</p>
         <h2>R&RSolutions S.A.S.</h2>
+        <p>Tienes un nuevo mensaje onbtenido a trav&eacute;s del contacto web y estos son los datos de la persona.</p>
         <div>
-          <h3 style="color: #546E7A;">El sr(a). <span style="color: #263238;">'. strip_tags($_POST['names']) .'</span> cuyo correo electrónico es <span style="color: #263238;">'. strip_tags($_POST['email']) .' y telefono(s) '. strip_tags($_POST['phone']) .'</span>  ha escrito el siguiente mensaje.</h3>
-          <h3 style="font-weight: 700; color= #263238;">'. strip_tags($_POST['message']) .'</h3>
+          <h3 style="margin-bottom: 0px;"><strong>Nombre </strong></h3>
+          <p style="margin-top: 3px">'. strip_tags($_POST['names']) .'</p>
+          <h3 style="margin-bottom: 0px;"><strong>Correo electrónico </strong></h3>
+          <p style="margin-top: 3px">'. strip_tags($_POST['email']) .'</p>
+          <h3 style="margin-bottom: 0px;"><strong>Teléfono(s) </strong></h3>
+          <p style="margin-top: 3px">'. strip_tags($_POST['phone']) .'</p>
+          <h3 style="margin-bottom: 0px;"><strong>Mensaje </strong></h3>
+          <p style="margin-top: 3px">'. strip_tags($_POST['message']) .'</p>
         </div>
-
       </div>
-
     </body>
     </html>';
 
     // Para enviar un correo HTML, debe establecerse la cabecera Content-type
     $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
     $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $cabeceras .= 'From: ' . $desde;
 
     // Cabeceras adicionales
-    $cabeceras .= 'To: rona7ld@gmail.com' . "\r\n";
-    $cabeceras .= 'From: Contacto Web - R&RSolutions contacto@ryrsolutions.co' . "\r\n";
-    $cabeceras .= 'Cc:' . "\r\n";
-    $cabeceras .= 'Bcc:' . "\r\n";
+    //$cabeceras .= 'To: rona7ld@gmail.com' . "\r\n";
+    //$cabeceras .= 'From: Contacto Web - R&RSolutions contacto@ryrsolutions.co' . "\r\n";
+    //$cabeceras .= 'Cc:' . "\r\n";
+    //$cabeceras .= 'Bcc:' . "\r\n";
 
     // Enviarlo
     mail($para, $título, $mensaje, $cabeceras);
 
-    // if ($_POST['submit']) {
-    //   if (mail ($to, $subject, $body, $from)) { 
-    //     echo '<p>Thank you for your email!</p>';
-    //   } else { 
-    //     echo '<div class="message-sucessfull--content">
-    //              <div>
-    //                 <div style="text-align: center;">
-    //                     <h3 style="color: #013f42; margin-top: 0;">Gestión Proactiva | Consultores HSEQ</h3>
-    //                 </div>
-    //                 <h1>Gracias por escribirnos</h1>
-    //                 <p>La información ha sido verificada y en poco tiempo le brindaremos respuesta a su mensaje.</p>
-    //              </div>   
-    //           </div>';
-    //   }
-    // }
   ?>
 
   <div class="message-sucessfull--content">
